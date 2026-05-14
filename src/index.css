@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth antialiased;
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply min-h-svh bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100;
+  }
+
+  /* Native <select> lists: avoid “invisible” options when OS draws a light menu in dark UI */
+  select option {
+    @apply bg-white text-slate-900;
+  }
+
+  html.dark select option {
+    @apply bg-slate-900 text-slate-100;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply border border-slate-200/80 bg-white/80 shadow-lg backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.06] dark:shadow-glass;
+  }
+
+  .gradient-accent {
+    @apply bg-gradient-to-r from-green-900 to-green-300 bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-green-800 to-green-400 px-4 py-2.5 text-sm font-semibold text-white shadow-lg transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-300 active:scale-[0.99];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white/60 px-3 py-2 text-sm font-medium text-slate-800 transition hover:bg-white dark:border-white/10 dark:bg-white/5 dark:text-slate-100 dark:hover:bg-white/10;
+  }
+
+  .card-hover {
+    @apply transition duration-300 will-change-transform hover:-translate-y-0.5 hover:shadow-lift dark:hover:shadow-lift;
+  }
+}
