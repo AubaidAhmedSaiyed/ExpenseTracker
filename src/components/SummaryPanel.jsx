@@ -54,8 +54,8 @@ export default function SummaryPanel({ expenses }) {
         </p>
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-3">
-        <div className="lg:col-span-2 space-y-4">
+      <div className="grid gap-4 lg:grid-cols-2">
+        <div className="space-y-4">
           <div className="grid gap-3 sm:grid-cols-2">
             <div className="rounded-2xl border border-slate-200/80 bg-white/60 p-4 dark:border-white/10 dark:bg-white/[0.04]">
               <p className="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">

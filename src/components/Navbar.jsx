@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-export default function Navbar({ theme, onToggleTheme }) {
+export default function Navbar({ theme, onToggleTheme, onNavigate, activePage }) {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
@@ -18,24 +18,20 @@ export default function Navbar({ theme, onToggleTheme }) {
         </a>
 
         <nav className="hidden items-center gap-6 md:flex" aria-label="Primary">
-          <a
-            className="text-sm font-medium text-slate-600 transition hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
-            href="#dashboard"
+          <button
+            type="button"
+            className={`text-sm font-medium transition ${activePage === 'home' ? 'text-slate-900 dark:text-white' : 'text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white'}`}
+            onClick={() => onNavigate('home')}
           >
             Dashboard
-          </a>
-          <a
-            className="text-sm font-medium text-slate-600 transition hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
-            href="#activity"
+          </button>
+          <button
+            type="button"
+            className={`text-sm font-medium transition ${activePage === 'activity' ? 'text-slate-900 dark:text-white' : 'text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white'}`}
+            onClick={() => onNavigate('activity')}
           >
             Activity
-          </a>
-          <a
-            className="text-sm font-medium text-slate-600 transition hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
-            href="#insights"
-          >
-            Insights
-          </a>
+          </button>
         </nav>
 
         <div className="flex items-center gap-2">
@@ -80,15 +76,20 @@ export default function Navbar({ theme, onToggleTheme }) {
       {open ? (
         <div id="mobile-nav" className="border-t border-slate-200/70 px-4 py-4 dark:border-white/10 md:hidden">
           <div className="mx-auto flex max-w-7xl flex-col gap-3">
-            <a className="rounded-xl px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/5" href="#dashboard" onClick={() => setOpen(false)}>
+            <button
+              type="button"
+              className="rounded-xl px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/5"
+              onClick={() => { onNavigate('home'); setOpen(false) }}
+            >
               Dashboard
-            </a>
-            <a className="rounded-xl px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/5" href="#activity" onClick={() => setOpen(false)}>
+            </button>
+            <button
+              type="button"
+              className="rounded-xl px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/5"
+              onClick={() => { onNavigate('activity'); setOpen(false) }}
+            >
               Activity
-            </a>
-            <a className="rounded-xl px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/5" href="#insights" onClick={() => setOpen(false)}>
-              Insights
-            </a>
+            </button>
             <button type="button" className="btn-ghost w-full justify-center" onClick={() => { onToggleTheme(); setOpen(false); }}>
               {theme === 'dark' ? 'Light mode' : 'Dark mode'}
             </button>
