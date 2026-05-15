@@ -3,7 +3,6 @@ import { formatDateTime, formatMoney } from '../utils/helpers.js'
 export default function ExpenseCard({ expense, onDelete }) {
   return (
     <article className="glass card-hover group relative overflow-hidden rounded-2xl p-4 sm:p-5">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 transition group-hover:opacity-100 dark:via-white/30" />
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div className="min-w-0 space-y-1">
           <h3 className="truncate text-base font-semibold text-slate-900 dark:text-white">{expense.name}</h3>

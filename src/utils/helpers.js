@@ -77,12 +77,12 @@ export function monthlySpend(expenses) {
 
 export function categoryColorClass(category) {
   const map = {
-    Food: 'from-green-700/80 to-green-500/80',
-    Travel: 'from-sky-500/80 to-cyan-500/80',
-    Marketing: 'from-fuchsia-500/80 to-purple-600/80',
-    Utilities: 'from-emerald-500/80 to-teal-600/80',
-    Entertainment: 'from-pink-500/80 to-rose-600/80',
-    Other: 'from-slate-400/80 to-slate-500/80',
+    Food: 'bg-green-600',
+    Travel: 'bg-cyan-600',
+    Marketing: 'bg-purple-600',
+    Utilities: 'bg-teal-600',
+    Entertainment: 'bg-rose-600',
+    Other: 'bg-slate-400',
   }
   return map[category] ?? map.Other
 }

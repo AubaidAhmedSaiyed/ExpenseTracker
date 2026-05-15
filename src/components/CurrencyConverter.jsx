@@ -73,7 +73,7 @@ export default function CurrencyConverter({
           </div>
 
           <div className="lg:col-span-2">
-            <div className="rounded-2xl border border-slate-200/80 bg-gradient-to-br from-white to-slate-50 p-5 dark:border-white/10 dark:from-white/[0.07] dark:to-slate-950/30">
+            <div className="rounded-2xl border border-slate-200/80 bg-white p-5 dark:border-white/10 dark:bg-slate-900">
               <p className="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">
                 Converted total
               </p>

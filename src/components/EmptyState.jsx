@@ -1,10 +1,10 @@
 export default function EmptyState({ title = 'No expenses yet', description, className = '' }) {
   return (
     <div
-      className={`flex flex-col items-center justify-center gap-4 rounded-2xl border border-dashed border-slate-300/80 bg-slate-50/50 px-6 py-14 text-center dark:border-white/15 dark:bg-white/[0.03] ${className}`}
+      className={`flex flex-col items-center justify-center gap-4 rounded-2xl border border-dashed border-slate-300/80 bg-slate-50/50 px-6 py-14 text-center dark:border-white/15 dark:bg-slate-900/30 ${className}`}
     >
       <div className="relative h-28 w-28">
-        <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-green-900/30 via-green-600/25 to-green-400/30 blur-xl" />
+        <div className="absolute inset-0 rounded-full bg-green-100/30 blur-xl dark:bg-green-900/20" />
         <svg
           viewBox="0 0 120 120"
           className="relative h-full w-full text-slate-400 dark:text-slate-500"
@@ -21,9 +21,9 @@ export default function EmptyState({ title = 'No expenses yet', description, cla
           <circle cx="84" cy="78" r="16" fill="url(#g)" opacity="0.9" />
           <defs>
             <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0%" stopColor="#f97316" />
-              <stop offset="50%" stopColor="#a855f7" />
-              <stop offset="100%" stopColor="#22d3ee" />
+              <stop offset="0%" stopColor="#22d3ee" />
+              <stop offset="50%" stopColor="#06b6d4" />
+              <stop offset="100%" stopColor="#0891b2" />
             </linearGradient>
           </defs>
         </svg>

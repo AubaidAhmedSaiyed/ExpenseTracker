@@ -14,13 +14,7 @@ export default function Navbar({ theme, onToggleTheme }) {
     <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-white/70 backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/70">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <a href="#" className="flex items-center gap-3" onClick={(e) => e.preventDefault()}>
-          <span className="grid h-10 w-10 place-items-center rounded-2xl bg-gradient-to-br from-green-900 via-green-600 to-green-300 text-sm font-bold text-white shadow-lg">
-            FS
-          </span>
-          <div className="leading-tight">
-            <p className="text-sm font-semibold tracking-tight text-slate-900 dark:text-white">FlowSpend</p>
-            <p className="text-xs text-slate-500 dark:text-slate-400">Expense intelligence</p>
-          </div>
+          <p className="text-lg font-semibold tracking-tight text-slate-900 dark:text-white">Expense Tracker</p>
         </a>
 
         <nav className="hidden items-center gap-6 md:flex" aria-label="Primary">

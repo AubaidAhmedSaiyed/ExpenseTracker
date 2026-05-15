@@ -33,7 +33,7 @@ function readTheme() {
   } catch {
     // ignore
   }
-  return 'dark'
+  return 'light'
 }
 
 export default function Home() {

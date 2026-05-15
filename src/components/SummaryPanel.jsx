@@ -108,7 +108,7 @@ export default function SummaryPanel({ expenses }) {
                     </div>
                     <div className="h-2 overflow-hidden rounded-full bg-slate-200/70 dark:bg-white/10">
                       <div
-                        className={`h-full rounded-full bg-gradient-to-r ${categoryColorClass(c)}`}
+                        className={`h-full rounded-full ${categoryColorClass(c)}`}
                         style={{ width: `${pct}%` }}
                       />
                     </div>
